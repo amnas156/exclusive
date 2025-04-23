@@ -85,11 +85,12 @@ header{
 }
 header section.wrapper{
     width: 90%;
-    margin: 0 5%;
+    margin: 0 auto;
     margin-top: 20px;
     display: flex;
     align-items: center;
     padding: 15px 50px;
+    justify-content: space-between;
 }
 header section.wrapper div.menu ul.menu-bar{
     position: absolute;
@@ -125,9 +126,7 @@ header section.wrapper div.menu ul.menu-bar a{
     font-weight: 900;
     font-family: "poppinslight";
 }
-header section.wrapper div.logo{
-    width: 28%;
-}
+
 header section.wrapper div.logo h1{
     font-family: 'interbold';
     font-size: 24px;
@@ -153,8 +152,11 @@ header section.wrapper ul.navlist li a{
 header section.wrapper ul.navlist li a:hover{
     text-decoration: underline;
 }
-header section.wrapper div.search {
-    width: 17%;
+div.seach_cart{
+    display: flex;
+    gap: 10px;
+}
+div.search {
     display: flex;
     align-items: center;
     padding: 5px 10px;
@@ -166,29 +168,29 @@ header section.wrapper div.search {
     -ms-border-radius: 4px;
     -o-border-radius: 4px;
 }
-header section.wrapper div.search input{
+div.search input{
     background: transparent;
     padding: 5px;
     width: 153px;
     font-size: 12px;
 }
-header section.wrapper div.search input::placeholder{
+div.search input::placeholder{
     font-family: "poppinslight";
 }
-header section.wrapper div.search svg{
+div.search svg{
     position: absolute;
     right: 10px;
 }
-header section.wrapper div.cart{
+div.cart{
     display: flex;
     
 }
-header section.wrapper div.cart svg{
+div.cart svg{
     margin: 0 5px;
     width: 32px;
     height: 32px;
 }
-header section.wrapper div.cart svg:first-child{
+div.cart svg:first-child{
     display: none;
 }
 #spotlight{
@@ -259,7 +261,7 @@ header section.wrapper div.cart svg:first-child{
 }
 #category section.wrapper{
     width: 80%;
-    margin: 0 10%;
+    margin: 0 auto;
 }
 #category section.wrapper div.icon{
     width: 151.98px;
@@ -285,8 +287,9 @@ header section.wrapper div.cart svg:first-child{
     width: 100%;
     display: grid;
     grid-template-columns: repeat(auto-fit,170px);
+    gap: 10px;
     justify-content: space-between;
-    margin: 30px 0;
+    margin: 50px 0;
 
 }
 #category section.wrapper div.list ul li{
@@ -455,7 +458,7 @@ footer{
 }
 footer section.wrapper{
     width: 80%;
-    margin: 0 10%;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     
@@ -597,7 +600,7 @@ header section.wrapper div.search div.close svg{
         display: none;
     }
     footer section.wrapper {
-        margin: 0 5%;
+        margin: 0 auto;
         width: 90%;
     }
     footer section.wrapper div.logo div.input{
@@ -782,7 +785,7 @@ header section.wrapper div.search div.close svg{
         display: none;
     }
     #category section.wrapper div.list ul{
-        grid-template-columns: repeat(2,150px);
+        grid-template-columns: repeat(2,120px);
         
     }
     #main section.wrapper ul#main-ul li:nth-child(6){
@@ -846,5 +849,29 @@ header section.wrapper div.search div.close svg{
     footer section.wrapper div.logo div.input {
         width: 200px;
         margin-left: 23%;
+    }
+}
+@media (max-width:320px) {
+    #spotlight section.wrapper div.text-container h1 {
+        font-size: 27px;
+        line-height: 40px;
+    }
+    #spotlight section.wrapper div.text-container a.button {
+        left: 70px;
+    }
+    #category section.wrapper div.list h3 {
+        font-size: 20px;
+    }
+    #main section.wrapper ul#main-ul {
+        grid-template-columns: repeat(1, 100%);
+    }
+    footer section.wrapper div.list ul li a {
+        font-size: 8px;
+    }
+    footer section.wrapper div.list ul li p {
+        font-size: 15px;
+    }
+    section#announcement-bar{
+        display: none;
     }
 }
